@@ -3,6 +3,8 @@ package com.demoqa.tests;
 import org.junit.jupiter.api.Test;
 import com.demoqa.pages.RegistrationPage;
 
+import static com.demoqa.tests.TestData.picture;
+
 public class FormTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     @Test
@@ -17,11 +19,11 @@ public class FormTests extends TestBase {
                         .setBirthDate("14","November","1985")
                         .setSubjects("Chemistry")
                         .setHobbies("Reading")
-                        .uploadPicture()
+                        .uploadPicture(picture)
                         .setAdress("Main Str.87")
                         .setState("Uttar Pradesh")
                         .setCity("Lucknow")
-                        .clickButton();
+                        .clickSubmitButton();
 
         registrationPage.verifyModalsAppear()
                         .verifyResults("Student Name","John James")

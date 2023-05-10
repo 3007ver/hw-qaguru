@@ -11,7 +11,7 @@ public class TextBoxPage {
                     userEmail = $("#userEmail"),
                     currentAddress = $("#currentAddress"),
                     permanentAddress =  $("#permanentAddress"),
-                    button =  $("#submit");
+                    submitButton =  $("#submit");
 
     public TextBoxPage openPage() {
         open("/text-box");
@@ -44,8 +44,8 @@ public class TextBoxPage {
 
         return this;
     }
-    public TextBoxPage clickButton() {
-        button.click();
+    public TextBoxPage clickSubmitButton() {
+        submitButton.click();
 
         return this;
     }

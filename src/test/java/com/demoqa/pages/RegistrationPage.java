@@ -4,7 +4,6 @@ import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pages.components.CalendarComponent;
 import com.demoqa.pages.components.ResultsModalComponent;
 
-import java.io.File;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -25,7 +24,7 @@ public class RegistrationPage {
                     currentAdressInput = $("#currentAddress"),
                     state = $("#state"),
                     city = $("#city"),
-                    button = $("#submit");
+                    submitButton = $("#submit");
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
@@ -83,8 +82,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage uploadPicture () {
-        uploadPicture.uploadFile(new File("src/test/resources/image.jpg"));
+    public RegistrationPage uploadPicture (String value) {
+        uploadPicture.uploadFromClasspath(value);
 
         return this;
     }
@@ -109,8 +108,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage clickButton () {
-        button.click();
+    public RegistrationPage clickSubmitButton () {
+        submitButton.click();
 
         return this;
     }

@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
                         .setUserEmail("test@gmail.com")
                         .setCurrentAddress("First Address")
                         .setPermanentAddress("Second Address")
-                        .clickButton();
+                        .clickSubmitButton();
 
             textBoxPage.verifyResults("John James")
                         .verifyResults("test@gmail.com")
