@@ -23,7 +23,7 @@ public class TestBase {
       String selenoidUrl = System.getProperty("selenoidUrl");
       String selenoidLogin = System.getProperty("selenoidLogin");
       String selenoidPassword = System.getProperty("selenoidPassword");
-      Configuration.remote = String.format("https://%s:%s@%s, selenoidLogin, selenoidPassword, selenoidUrl");
+      Configuration.remote = String.format("https://%s:%s@%s", selenoidLogin, selenoidPassword, selenoidUrl);
 
       //  Configuration.browser = "chrome";
       Configuration.pageLoadStrategy = "eager";
